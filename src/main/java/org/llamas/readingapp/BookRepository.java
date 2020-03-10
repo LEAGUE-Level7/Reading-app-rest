@@ -1,5 +1,7 @@
 package org.llamas.readingapp;
 
+import java.util.Optional;
+
 import org.springframework.data.repository.CrudRepository;
 
 
@@ -7,5 +9,7 @@ import org.springframework.data.repository.CrudRepository;
 // CRUD refers Create, Read, Update, Delete
 
 public interface BookRepository extends CrudRepository<Book, Integer> {
+Optional<Book> findByTitle(String title);
+Iterable<Book> findByAuthor(String author);
 
 }
