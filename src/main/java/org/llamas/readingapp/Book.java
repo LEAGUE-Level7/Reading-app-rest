@@ -1,9 +1,13 @@
 package org.llamas.readingapp;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Book {
@@ -16,7 +20,14 @@ public class Book {
 	private String description;
 	private Integer copyright;
 	private Integer reviews;
-	
+	private Set<Page> pages;
+	@OneToMany(mappedBy = "book")
+	public Set<Page> getPages() {
+		return pages;
+	}
+	public void setPages(Set<Page> pages) {
+		this.pages = pages;
+	}
 	public Integer getId() {
 		return id;
 	}
@@ -59,4 +70,5 @@ public class Book {
 	public void setReviews(Integer reviews) {
 		this.reviews = reviews;
 	}
+
 }
