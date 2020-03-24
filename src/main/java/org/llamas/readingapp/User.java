@@ -1,9 +1,12 @@
 package org.llamas.readingapp;
 
+import java.util.Set;
+
 public class User {
 private Integer id;
 private String name; 
 private String pass;
+private Set<Book> books;
 public Integer getId() {
 	return id;
 }

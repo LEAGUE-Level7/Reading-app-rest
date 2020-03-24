@@ -5,7 +5,7 @@ private Integer id;
 private String image;
 private String text;
 private String audioFile;
-private Integer bookID;
+
 private Integer pageNumber;
 private Book book;
 public Integer getId() {
@@ -31,12 +31,6 @@ public String getAudioFile() {
 }
 public void setAudioFile(String audioFile) {
 	this.audioFile = audioFile;
-}
-public Integer getBookID() {
-	return bookID;
-}
-public void setBookID(Integer bookID) {
-	this.bookID = bookID;
 }
 public Integer getPageNumber() {
 	return pageNumber;

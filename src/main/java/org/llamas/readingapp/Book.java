@@ -20,14 +20,8 @@ public class Book {
 	private String description;
 	private Integer copyright;
 	private Integer reviews;
-	private Set<Page> pages;
 	@OneToMany(mappedBy = "book")
-	public Set<Page> getPages() {
-		return pages;
-	}
-	public void setPages(Set<Page> pages) {
-		this.pages = pages;
-	}
+	
 	public Integer getId() {
 		return id;
 	}
