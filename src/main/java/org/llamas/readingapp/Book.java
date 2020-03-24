@@ -19,8 +19,6 @@ public class Book {
 	private String image;
 	private String description;
 	private Integer copyright;
-	private Integer reviews;
-	@OneToMany(mappedBy = "book")
 	
 	public Integer getId() {
 		return id;
@@ -57,12 +55,6 @@ public class Book {
 	}
 	public void setCopyright(Integer copyright) {
 		this.copyright = copyright;
-	}
-	public Integer getReviews() {
-		return reviews;
-	}
-	public void setReviews(Integer reviews) {
-		this.reviews = reviews;
 	}
 
 }
