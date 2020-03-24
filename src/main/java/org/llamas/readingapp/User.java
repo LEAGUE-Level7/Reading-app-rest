@@ -7,6 +7,12 @@ private Integer id;
 private String name; 
 private String pass;
 private Set<Book> books;
+public Set<Book> getBooks() {
+	return books;
+}
+public void setBooks(Set<Book> books) {
+	this.books = books;
+}
 public Integer getId() {
 	return id;
 }
