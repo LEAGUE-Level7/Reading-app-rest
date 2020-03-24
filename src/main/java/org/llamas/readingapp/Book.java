@@ -1,9 +1,13 @@
 package org.llamas.readingapp;
 
+import java.util.ArrayList;
+import java.util.Set;
+
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Book {
@@ -17,7 +21,7 @@ public class Book {
 	private Integer copyright;
 	private Integer reviews;
 	private Integer pageNumber;
-	
+	@OneToMany(mappedBy = "book")
 	public Integer getId() {
 		return id;
 	}
