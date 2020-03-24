@@ -16,6 +16,7 @@ public class Book {
 	private String description;
 	private Integer copyright;
 	private Integer reviews;
+	private Integer pageNumber;
 	
 	public Integer getId() {
 		return id;
@@ -58,5 +59,11 @@ public class Book {
 	}
 	public void setReviews(Integer reviews) {
 		this.reviews = reviews;
+	}
+	public Integer getPageNumber() {
+		return pageNumber;
+	}
+	public void setPageNumber(Integer pageNumber) {
+		this.pageNumber = pageNumber;
 	}
 }
