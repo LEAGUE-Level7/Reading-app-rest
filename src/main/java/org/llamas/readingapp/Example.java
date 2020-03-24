@@ -44,7 +44,6 @@ public class Example {
 		b.setAuthor("Eric Park");
 		b.setCopyright(1950);
 		b.setDescription("Min Choi goes to The League and plays Mafia");
-		b.setReviews(23);
 		bookRepository.save(b);
 		return "success";
 	}
