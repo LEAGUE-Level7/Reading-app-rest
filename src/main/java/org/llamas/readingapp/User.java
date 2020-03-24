@@ -2,11 +2,20 @@ package org.llamas.readingapp;
 
 import java.util.Set;
 
+import javax.persistence.OneToMany;
+
 public class User {
 private Integer id;
 private String name; 
 private String pass;
 private Set<Book> books;
+@OneToMany
+public Set<Book> getBooks() {
+	return books;
+}
+public void setBooks(Set<Book> books) {
+	this.books = books;
+}
 public Integer getId() {
 	return id;
 }
