@@ -19,13 +19,8 @@ public class Book {
 	private String image;
 	private String description;
 	private Integer copyright;
-<<<<<<< HEAD
+
 	
-=======
-	private Integer reviews;
-	private Integer pageNumber;
-	@OneToMany(mappedBy = "book")
->>>>>>> b15ef809164f79250e017624b7ab7caa48dffb72
 	public Integer getId() {
 		return id;
 	}
@@ -62,20 +57,6 @@ public class Book {
 	public void setCopyright(Integer copyright) {
 		this.copyright = copyright;
 	}
-<<<<<<< HEAD
 
-=======
-	public Integer getReviews() {
-		return reviews;
-	}
-	public void setReviews(Integer reviews) {
-		this.reviews = reviews;
-	}
-	public Integer getPageNumber() {
-		return pageNumber;
-	}
-	public void setPageNumber(Integer pageNumber) {
-		this.pageNumber = pageNumber;
-	}
->>>>>>> b15ef809164f79250e017624b7ab7caa48dffb72
+	
 }
