@@ -2,20 +2,26 @@ package org.llamas.readingapp;
 
 import java.util.Set;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+@Entity
 public class User {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 private Integer id;
 private String name; 
 private String pass;
-private Set<Book> books;
-@OneToMany
-public Set<Book> getBooks() {
+//private Set<Book> books;
+/*public Set<Book> getBooks() {
 	return books;
 }
 public void setBooks(Set<Book> books) {
 	this.books = books;
-}
+}*/
 public Integer getId() {
 	return id;
 }

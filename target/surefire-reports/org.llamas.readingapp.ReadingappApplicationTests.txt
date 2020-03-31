@@ -9,4 +9,3 @@ Caused by: org.springframework.beans.factory.BeanCreationException: Error creati
 Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.format.support.FormattingConversionService]: Factory method 'mvcConversionService' threw exception; nested exception is org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pageRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class org.llamas.readingapp.Page
 Caused by: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'pageRepository': Invocation of init method failed; nested exception is java.lang.IllegalArgumentException: Not a managed type: class org.llamas.readingapp.Page
 Caused by: java.lang.IllegalArgumentException: Not a managed type: class org.llamas.readingapp.Page
-
