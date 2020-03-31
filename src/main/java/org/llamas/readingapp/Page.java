@@ -4,6 +4,8 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
+import javax.persistence.OneToMany;
 
 @Entity
 public class Page {
@@ -14,13 +16,14 @@ private String image;
 private String text;
 private String audioFile;
 private Integer pageNumber;
-/*private Book book;
+@ManyToOne()
+private Book book;
 public Book getBook() {
 	return book;
 }
 public void setBook(Book book) {
 	this.book = book;
-}*/
+}
 public Integer getId() {
 	return id;
 }
