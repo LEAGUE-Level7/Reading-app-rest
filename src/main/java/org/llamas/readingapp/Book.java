@@ -20,7 +20,6 @@ public class Book {
 	private String description;
 	private Integer copyright;
 	private Integer pageNumber;
-	@OneToMany(mappedBy = "book")
 	public Integer getId() {
 		return id;
 	}

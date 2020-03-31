@@ -1,18 +1,26 @@
 package org.llamas.readingapp;
 
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+
+@Entity
 public class Page {
+	@Id
+	@GeneratedValue(strategy=GenerationType.AUTO)
 private Integer id;
 private String image;
 private String text;
 private String audioFile;
 private Integer pageNumber;
-private Book book;
+/*private Book book;
 public Book getBook() {
 	return book;
 }
 public void setBook(Book book) {
 	this.book = book;
-}
+}*/
 public Integer getId() {
 	return id;
 }
