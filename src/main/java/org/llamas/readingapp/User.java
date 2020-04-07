@@ -6,6 +6,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
+import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 
 @Entity
@@ -15,13 +16,14 @@ public class User {
 private Integer id;
 private String name; 
 private String pass;
-//private Set<Book> books;
-/*public Set<Book> getBooks() {
+@OneToMany()
+private Set<Book> books;
+public Set<Book> getBooks() {
 	return books;
 }
 public void setBooks(Set<Book> books) {
 	this.books = books;
-}*/
+}
 public Integer getId() {
 	return id;
 }
