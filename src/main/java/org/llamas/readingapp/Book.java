@@ -19,12 +19,9 @@ public class Book {
 	private String image;
 	private String description;
 	private Integer copyright;
-<<<<<<< HEAD
 
-	
-=======
 	private Integer pageNumber;
->>>>>>> 0e7d762167e4504b2ba56b0e748223093f5b655f
+
 	public Integer getId() {
 		return id;
 	}
@@ -61,15 +58,11 @@ public class Book {
 	public void setCopyright(Integer copyright) {
 		this.copyright = copyright;
 	}
-<<<<<<< HEAD
 
-	
-=======
 	public Integer getPageNumber() {
 		return pageNumber;
 	}
 	public void setPageNumber(Integer pageNumber) {
 		this.pageNumber = pageNumber;
 	}
->>>>>>> 0e7d762167e4504b2ba56b0e748223093f5b655f
 }
