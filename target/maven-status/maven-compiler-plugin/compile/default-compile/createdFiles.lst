@@ -1,4 +1,5 @@
 org/llamas/readingapp/BookRepository.class
+org/llamas/readingapp/SpringBootFileDownoad.class
 org/llamas/readingapp/ReadingappApplication.class
 org/llamas/readingapp/Page.class
 org/llamas/readingapp/Book.class
