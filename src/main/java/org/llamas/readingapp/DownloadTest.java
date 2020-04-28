@@ -32,7 +32,6 @@ public class DownloadTest {
 			@PathVariable("fileName") String fileName) throws IOException {
 
 		File file = new File(EXTERNAL_FILE_PATH + fileName);
-		System.out.println(EXTERNAL_FILE_PATH + fileName);
 		if (file.exists()) {
 
 			//get the mimetype
