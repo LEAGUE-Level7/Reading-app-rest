@@ -1,7 +1,0 @@
--------------------------------------------------------------------------------
-Test set: org.llamas.readingapp.ReadingappApplicationTests
--------------------------------------------------------------------------------
-Tests run: 1, Failures: 0, Errors: 1, Skipped: 0, Time elapsed: 1.055 s <<< FAILURE! - in org.llamas.readingapp.ReadingappApplicationTests
-org.llamas.readingapp.ReadingappApplicationTests  Time elapsed: 1.053 s  <<< ERROR!
-java.lang.IllegalStateException: Found multiple @SpringBootConfiguration annotated classes [Generic bean: class [org.llamas.readingapp.ReadingappApplication]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/ankitbisain/Desktop/Reading-app-rest/target/classes/org/llamas/readingapp/ReadingappApplication.class], Generic bean: class [org.llamas.readingapp.SpringBootFileDownoad]; scope=; abstract=false; lazyInit=null; autowireMode=0; dependencyCheck=0; autowireCandidate=true; primary=false; factoryBeanName=null; factoryMethodName=null; initMethodName=null; destroyMethodName=null; defined in file [/Users/ankitbisain/Desktop/Reading-app-rest/target/classes/org/llamas/readingapp/SpringBootFileDownoad.class]]
-
