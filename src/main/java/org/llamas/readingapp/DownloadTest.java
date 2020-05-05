@@ -25,25 +25,54 @@ import org.springframework.web.bind.annotation.RestController;
 @RequestMapping("/download")
 public class DownloadTest {
 	
-	private static final String EXTERNAL_FILE_PATH = "./TestImages/";
+	private static final String EXTERNAL_FILE_PATH = "./Books/";
 
-	@RequestMapping("/file/{fileName:.+}")
-	public void downloadPDFResource(HttpServletRequest request, HttpServletResponse response,
-			@PathVariable("fileName") String fileName) throws IOException {
-
-		File file = new File(EXTERNAL_FILE_PATH + fileName);
+	@RequestMapping("/file/{bookName:.+}/{fileName:.+}")
+	public void downloadBookResource(HttpServletRequest request, HttpServletResponse response,
+			@PathVariable("fileName") String fileName, @PathVariable("bookName") String bookName) throws IOException {
+		System.out.println(EXTERNAL_FILE_PATH + bookName + "/" + fileName);
+		File file = new File(EXTERNAL_FILE_PATH + bookName + "/" + fileName);
 		if (file.exists()) {
-
+			System.out.println("yuhhh");
 			//get the mimetype
 			String mimeType = URLConnection.guessContentTypeFromName(file.getName());
-			System.out.print(mimeType);
 			if (mimeType == null) {
 				//unknown mimetype so set the mimetype to application/octet-stream
 				mimeType = "application/octet-stream";
 			}
 
 			response.setContentType(mimeType);
-			response.setHeader("Content-Disposition", String.format("attachment; filename=\"" + "New" + file.getName() + "\""));
+			response.setHeader("Content-Disposition", String.format("attachment; filename=\"" + file.getName() + "\""));
+
+			 //Here we have mentioned it to show as attachment
+			 //response.setHeader("Content-Disposition", String.format("attachment; filename=\"" + file.getName() + "\""));
+
+			response.setContentLength((int) file.length());
+
+			InputStream inputStream = new BufferedInputStream(new FileInputStream(file));
+
+			FileCopyUtils.copy(inputStream, response.getOutputStream());
+
+		}
+	}
+	
+	
+	@RequestMapping("/file/{bookName:.+}/{pages:.+}/{pageName:.+}/{fileName:.+}")
+	public void downloadPageResource(HttpServletRequest request, HttpServletResponse response,
+			@PathVariable("bookName") String bookName, @PathVariable("pages") String pages, @PathVariable("pageName") String pageName, @PathVariable("fileName") String fileName) throws IOException {
+		System.out.println(EXTERNAL_FILE_PATH + bookName + "/" + pages + "/" + pageName + "/" + fileName);
+		File file = new File(EXTERNAL_FILE_PATH + bookName + "/" + pages + "/" + pageName + "/" + fileName);
+		if (file.exists()) {
+			System.out.println("yuhhh");
+			//get the mimetype
+			String mimeType = URLConnection.guessContentTypeFromName(file.getName());
+			if (mimeType == null) {
+				//unknown mimetype so set the mimetype to application/octet-stream
+				mimeType = "application/octet-stream";
+			}
+
+			response.setContentType(mimeType);
+			response.setHeader("Content-Disposition", String.format("attachment; filename=\"" + file.getName() + "\""));
 
 			 //Here we have mentioned it to show as attachment
 			 //response.setHeader("Content-Disposition", String.format("attachment; filename=\"" + file.getName() + "\""));
