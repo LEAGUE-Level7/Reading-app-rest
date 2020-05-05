@@ -28,10 +28,6 @@ public class Example {
 //	  Book one(@PathVariable Integer id) {
 //	    return bookRepository.findById(id).get();
 //	  }
-	@GetMapping("/books/{title}")
-	Book two(@PathVariable String title) {
-		return bookRepository.findByTitle(title).get();
-	}
 	@GetMapping("/findbyauthor")
 	public Iterable<Book> findbyauthor(@RequestParam(value = "author", defaultValue = "Ankit") String author){
 		return bookRepository.findByAuthor(author);
@@ -46,6 +42,16 @@ public class Example {
 		b.setDescription("Min Choi goes to The League and plays Mafia");
 		bookRepository.save(b);
 		return "success";
+	}
+	@PostMapping("/addbooktwo")
+	String addingBook(){
+		Book b2 = new Book();
+		b2.setTitle("Eli Browne");
+		b2.setAuthor("Max Norman");
+		b2.setCopyright(940);
+		b2.setDescription("The story of a young boy who dropped programming to hit a white ball");
+		bookRepository.save(b2);
+		return "yeet";
 	}
 //	@GetMapping("/Comp1ex")
 //	Book getEricPark() {
