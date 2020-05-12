@@ -9,6 +9,9 @@ import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.OneToMany;
 
+import org.springframework.web.bind.annotation.RestController;
+
+
 @Entity
 public class Book {
 	@Id
