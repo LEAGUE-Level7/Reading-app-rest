@@ -22,7 +22,7 @@ String BookCreation(@PathVariable String title, @PathVariable String author) {
 	br.save(b);
 	return "Min Choi";
 }
-@GetMapping("/findpages/{book}")
+@GetMapping("/findpages/{bookID}")
 Iterable<Page> getPages(@PathVariable Integer bookID){
 	Iterable<Page> PageList = pr.findByBook(br.findById(bookID).get());
 	return PageList;
