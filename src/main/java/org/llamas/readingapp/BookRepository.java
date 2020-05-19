@@ -11,5 +11,7 @@ import org.springframework.data.repository.CrudRepository;
 public interface BookRepository extends CrudRepository<Book, Integer> {
 Optional<Book> findByTitle(String title);
 Iterable<Book> findByAuthor(String author);
+Optional<Book> findById(Integer bookID) ;
+
 
 }

@@ -6,5 +6,5 @@ import org.springframework.data.repository.CrudRepository;
 
 public interface PageRepository extends CrudRepository<Page, Integer>{
 Optional<Page> findByPageNumber(Integer pageNumber);
-//Iterable<Page> findByBook(Book book);
+Iterable<Page> findByBook(Book book);
 }
